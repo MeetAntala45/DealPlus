@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans- !important;
+    /* color: #363636; */
+    font-size: 16px;
+}
+Input,select,textarea{
+    min-height: 45px !important;
+    border: 1px solid #b9b9b9 !important;
+    width: 100%;
+}
+Input:focus,select:focus,textarea:focus{
+ outline: none !important;
+ border: 1px solid #7a7474 !important;
+ box-shadow: none !important;
+}
+button{
+    height: 45px !important;
+    box-shadow: none !important;
+}
+
+table{
+    border:#b1aeae 1px solid !important;
+    border-radius: 10px !important;
+}
+.max-width{
+    max-width: max-content !important;
+}
+.footer-links {
+    a {
+      padding-bottom: 2px;
+    }
+  }
+  
