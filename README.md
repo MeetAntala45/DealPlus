@@ -25,6 +25,8 @@
 - **bcrypt** – Password hashing
 - **Cloudinary** – Cloud-based image hosting
 
+## 📸 Screenshots
+
 
 
 
