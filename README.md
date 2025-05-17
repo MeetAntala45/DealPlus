@@ -27,22 +27,23 @@
 
 ## 📸 Screenshots
 
-![Login](screenshots/login.png)
+![DealPlus](screenshots/1.png)
 
+![DealPlus](screenshots/2.png)
 
-![Home](screenshots/home.png)
+![DealPlus](screenshots/3.png)
 
+![DealPlus](screenshots/4.png)
 
-![Dashboard](screenshots/dashboard.png)
+![DealPlus](screenshots/5.png)
 
+![DealPlus](screenshots/6.png)
 
-![Add Product](screenshots/addProduct.png)
+![DealPlus](screenshots/7.png)
 
+![DealPlus](screenshots/8.png)
 
-![Product Details](screenshots/productDetails.png)
-
-
-![Bid](screenshots/bid.png)
+![DealPlus](screenshots/9.png)
 
 
 
