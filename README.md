@@ -28,10 +28,20 @@
 ## 📸 Screenshots
 
 ![Login](screenshots/login.png)
+
+
 ![Home](screenshots/home.png)
+
+
 ![Dashboard](screenshots/dashboard.png)
+
+
 ![Add Product](screenshots/addProduct.png)
+
+
 ![Product Details](screenshots/productDetails.png)
+
+
 ![Bid](screenshots/bid.png)
 
 
