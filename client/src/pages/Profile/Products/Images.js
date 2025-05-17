@@ -15,17 +15,16 @@ const Images = ({ selectedProduct, getData, setshowProductForm }) => {
     try {
       dispatch(SetLoader(true));
       // upload imagres to cloundnery and get url from backend
-      // always use form data to get images from pc
-      const formData = new FormData(); 
+      const formData = new FormData();
       formData.append("file", file);
       formData.append("productId", selectedProduct._id);
       const response = await UploadProductImage(formData);
       dispatch(SetLoader(false));
       if (response.success) {
         message.success(response.message);
-        setimages([...images,response.data]);
+        setimages([...images, response.data]);
         setshowpreview(false);
-        setfile(null)
+        setfile(null);
         getData();
         setshowProductForm(false);
       } else {
@@ -38,49 +37,57 @@ const Images = ({ selectedProduct, getData, setshowProductForm }) => {
     }
   };
 
-  const handleDelete= async(image)=>{
-        try {
-          const updatedImageArray = images.filter((img)=>img!==image);
-          const updatedProduct={...selectedProduct,images:updatedImageArray}
-          const response = await EditProduct(selectedProduct._id,updatedProduct);
-          if(response.success){
-             message.success("Image Deleted Successfully");
-             setimages(updatedImageArray);
-             setfile(null);
-             getData();
-          }else{
-            throw new Error(message.message);
-          }
-        } catch (error) {
-          dispatch(SetLoader(false));
-          message.error(error.message);
-        }
-  }
+  const handleDelete = async (image) => {
+    try {
+      const updatedImageArray = images.filter((img) => img !== image);
+      const updatedProduct = { ...selectedProduct, images: updatedImageArray };
+      const response = await EditProduct(selectedProduct._id, updatedProduct);
+      if (response.success) {
+        message.success("Image Deleted Successfully");
+        setimages(updatedImageArray);
+        setfile(null);
+        getData();
+      } else {
+        throw new Error(message.message);
+      }
+    } catch (error) {
+      dispatch(SetLoader(false));
+      message.error(error.message);
+    }
+  };
 
   return (
     <div>
       <div className="flex gap-2 mb-4 ">
-          {images.map((image)=>{
-            return (
-              <div className="flex gap-2 border border-solid border-gray-500 p-2 items-end group">
-                <img className="h-20 w-20 object-cover" src={image} alt="" srcset="" />
-                <MdDeleteForever className="cursor-pointer hidden group-hover:block" size={22} onClick={()=>handleDelete(image)} />
-              </div>
-            )
-          })}
-        </div>
+        {images.map((image) => {
+          return (
+            <div className="flex gap-2 border border-solid border-gray-500 p-2 items-end group">
+              <img
+                className="h-20 w-20 object-cover"
+                src={image}
+                alt=""
+                srcset=""
+              />
+              <MdDeleteForever
+                className="cursor-pointer hidden group-hover:block"
+                size={22}
+                onClick={() => handleDelete(image)}
+              />
+            </div>
+          );
+        })}
+      </div>
 
       <Upload
         listType="picture"
-        beforeUpload={()=> false}
+        beforeUpload={() => false}
         showUploadList={showpreview}
         onChange={(info) => {
           setfile(info.file);
           setshowpreview(true);
         }}
       >
-        
-        <Button type="dashed">Upload Image</Button>
+        <Button type="default">Upload Image</Button>
       </Upload>
 
       <div className="flex justify-end gap-5 mt-5">

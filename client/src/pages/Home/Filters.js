@@ -7,14 +7,15 @@ const categories = [
   { name: "Fashion", value: "fashion" },
   { name: "Sports", value: "sport" },
   { name: "Books", value: "book" },
+  { name: "Other", value: "other" },
 ];
 
 const ages = [
-  { name: "0-2 Month/Year old", value: "0-2" },
-  { name: "3-5 Month/Year old", value: "3-5" },
-  { name: "6-8 Month/Year old", value: "6-8" },
-  { name: "9-12 Month/Year old", value: "9-12" },
-  { name: "13+ Month/Year old", value: "12-20" },
+  { name: "0-1 Years old", value: "0-1" },
+  { name: "2-5 Years old", value: "2-5" },
+  { name: "6-8 Years old", value: "6-8" },
+  { name: "9-12 Years old", value: "9-12" },
+  { name: "13+ Years old", value: "12-20" },
 ];
 
 const Filters = ({ showFilters, setshowFilters, filters, setfilters }) => {
@@ -53,7 +54,9 @@ const Filters = ({ showFilters, setshowFilters, filters, setfilters }) => {
                   }
                 }}
               />
-              <label htmlFor="category" className="text-gray-700">{category.name}</label>
+              <label htmlFor="category" className="text-gray-700">
+                {category.name}
+              </label>
             </div>
           ))}
         </div>
@@ -81,7 +84,9 @@ const Filters = ({ showFilters, setshowFilters, filters, setfilters }) => {
                   }
                 }}
               />
-              <label htmlFor="age" className="text-gray-700">{age.name}</label>
+              <label htmlFor="age" className="text-gray-700">
+                {age.name}
+              </label>
             </div>
           ))}
         </div>

@@ -10,12 +10,8 @@ import { UpdateUserStatus, getAllUsers } from "../../Apicalls/users";
 
 const Users = () => {
   const [users, setusers] = useState([]);
-  //   const [product, setproduct] = useState([])
   const disptach = useDispatch();
 
-  // const { user } = useSelector((state) => state.users);
-
-  // console.log(user.role)
 
   const getData = async () => {
     try {

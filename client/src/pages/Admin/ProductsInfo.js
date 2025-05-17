@@ -5,7 +5,6 @@ import { SetLoader } from "../../redux/LoadersSlice";
 import {GetProducts, updateProductStatus} from "../../Apicalls/products";
 import moment  from "moment";
 
-// dataIndex must match with aproprite mongoDb proprty
 
 const ProductsInfo = () => {
   const [product, setproduct] = useState([])

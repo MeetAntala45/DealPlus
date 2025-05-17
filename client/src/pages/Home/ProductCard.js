@@ -14,16 +14,14 @@ const ProductCard = ({ products }) => {
         >
           <div className="w-full rounded-lg shadow-lg bg-white">
             
-            {/* Image Container */}
             <div className="h-64 overflow-hidden flex justify-center items-center"> 
               <img
-                className="h-full w-auto object-contain" // Ensure the image retains its aspect ratio and fits within the height
+                className="h-full w-auto object-contain"
                 src={product.images[0]}
                 alt="productimg"
               />
             </div>
 
-            {/* Product Details */}
             <div className="p-5 bg-gray-100">
               <div className="mb-2 h-6 overflow-hidden">
                 <h5 className="text-xl font-bold tracking-tight text-gray-800">

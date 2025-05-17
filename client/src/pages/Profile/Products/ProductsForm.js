@@ -135,6 +135,7 @@ const ProductsForm = ({
                       <option value="home">Home</option>
                       <option value="sport">Sports</option>
                       <option value="book">Books</option>
+                      <option value="other">Other</option>
                     </select>
                   </Form.Item>
                 </Col>
@@ -144,10 +145,8 @@ const ProductsForm = ({
                   </Form.Item>
                 </Col>
                 <Col span={6}>
-                  <Form.Item label="MM/YYYY" name="monYears" rules={rules}>
+                  <Form.Item label="Years" name="monYears" rules={rules}>
                     <select name="" id="" className="rounded-xl">
-                      <option value="">Select</option>
-                      <option value="Months">Months</option>
                       <option value="years">Years</option>
                     </select>
                   </Form.Item>

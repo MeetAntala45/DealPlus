@@ -3,8 +3,6 @@ import { useDispatch } from "react-redux";
 import { message } from "antd";
 import { SetLoader } from "../../redux/LoadersSlice";
 import { GetProducts } from "../../Apicalls/products";
-import Divider from "../../components/Divider";
-import { useNavigate } from 'react-router-dom';
 import Filters from "./Filters";
 import { IoFilterSharp } from 'react-icons/io5';
 import Search from "./Search";

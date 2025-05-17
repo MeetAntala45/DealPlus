@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const BidsModel = require("../models/bid.model");
 const authMiddlewares = require("../middlewares/authMiddlewares");
-// place a bids
 
 router.post("/place-new-bid", authMiddlewares, async (req, res) => {
   try {

@@ -3,8 +3,7 @@ import { GetProductsBysearch } from "../../Apicalls/products";
 import { message } from "antd";
 import Error from "../../components/Error";
 
-const Search = ({setproducts,reloadData}) => {
-  
+const Search = ({ setproducts, reloadData }) => {
   const inputElem = useRef(null);
   const debounce = (func, wait) => {
     let timeout;
@@ -23,8 +22,8 @@ const Search = ({setproducts,reloadData}) => {
         } else {
           throw new Error("Product not fiilters");
         }
-      }else{
-        reloadData()
+      } else {
+        reloadData();
       }
     } catch (error) {
       message.error(error.message);

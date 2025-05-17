@@ -48,7 +48,6 @@ const SingleProduct = () => {
     product && (
       <div className="container mx-auto my-5">
         <div className="grid grid-cols-2 gap-5">
-          {/* Image Section */}
           <div className="flex flex-col gap-5">
           <div className="h-80 overflow-hidden">
   <img
@@ -84,7 +83,6 @@ const SingleProduct = () => {
             </div>
           </div>
 
-          {/* Product Details Section */}
           <div className="flex flex-col gap-3">
             <div>
               <h1
@@ -107,7 +105,7 @@ const SingleProduct = () => {
 
               <div className="flex justify-between mt-2">
                 <span>Price</span>
-                <span>${product.price}</span>
+                <span>&#8377;{product.price}</span>
               </div>
 
               <div className="flex justify-between mt-2">
@@ -157,21 +155,13 @@ const SingleProduct = () => {
                 </span>
               </div>
 
-              {product.monYears === "Months" ? (
-                <div className="flex justify-between mt-2">
-                  <span>Purchased Month</span>
-                  <span>
-                    {moment().subtract(product.age, "months").format("MMM-YYYY")}
-                  </span>
-                </div>
-              ) : (
                 <div className="flex justify-between mt-2">
                   <span>Purchased Year</span>
                   <span>
                     {moment().subtract(product.age, "years").format("YYYY")}
                   </span>
                 </div>
-              )}
+              
             </div>
 
             <Divider />
@@ -193,7 +183,6 @@ const SingleProduct = () => {
               </div>
             </div>
 
-            {/* Bids Section */}
             <Divider />
             <div className="flex flex-col">
               <div className="flex justify-between mb-5">
@@ -222,7 +211,7 @@ const SingleProduct = () => {
 
                       <div className="flex justify-between text-gray-600">
                         <span>Bid Amount</span>
-                        <span>${bid.bidAmount}</span>
+                        <span>&#8377;{bid.bidAmount}</span>
                       </div>
 
                       <div className="flex justify-between text-gray-600">

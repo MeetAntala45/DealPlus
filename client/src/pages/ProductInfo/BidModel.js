@@ -23,7 +23,6 @@ const BidModel = ({ product, reloadData, showBidModel, setshowBidModel }) => {
          dispatch(SetLoader(false))
          if(response.success) {
           message.success("Bid added successfully");
-          // send notification
           await AddNotification({
             title:"New Bid has been placed",
             message:`A new Bid has been placed on your product ${product.name} by ${user.name} for ${values.bidAmount}`,
