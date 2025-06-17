@@ -1,6 +1,9 @@
 # 🛍️ DealPlus - Marketplace for Buyers and Sellers
 
-**DealPlus** is a full-featured MERN stack web application that replicates the core functionality of OLX, enabling users to buy and sell products online. Users can view products, filter them by category, upload their own listings with images and even bid on products.
+ - Developed a MERN stack-based online market place enabling users to buy or sell pre-owned products.
+ - Implemented product listings, bidding system, and advanced search and filtering.
+ - Utilized Ant Design (antd) library for building a responsive and consistent UI, with secure authentication
+ using JWT and used Cloudinary for storing images of products.
 
 
 ## 🚀 Features
@@ -38,8 +41,6 @@
 ![DealPlus](screenshots/5.png)
 
 ![DealPlus](screenshots/6.png)
-
-![DealPlus](screenshots/7.png)
 
 ![DealPlus](screenshots/8.png)
 
